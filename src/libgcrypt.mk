@@ -3,13 +3,13 @@
 PKG             := libgcrypt
 $(PKG)_WEBSITE  := https://directory.fsf.org/wiki/Libgcrypt
 $(PKG)_IGNORE   :=
-$(PKG)_VERSION  := 1.8.1
-$(PKG)_CHECKSUM := 7a2875f8b1ae0301732e878c0cca2c9664ff09ef71408f085c50e332656a78b3
+$(PKG)_VERSION  := 1.8.3
+$(PKG)_CHECKSUM := 66ec90be036747602f2b48f98312361a9180c97c68a690a5f376fa0f67d0af7c
 $(PKG)_SUBDIR   := libgcrypt-$($(PKG)_VERSION)
 $(PKG)_FILE     := libgcrypt-$($(PKG)_VERSION).tar.bz2
 $(PKG)_URL      := https://gnupg.org/ftp/gcrypt/libgcrypt/$($(PKG)_FILE)
 $(PKG)_URL_2    := https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/libgcrypt/$($(PKG)_FILE)
-$(PKG)_DEPS     := gcc libgpg_error
+$(PKG)_DEPS     := cc libgpg_error
 
 define $(PKG)_UPDATE
     $(WGET) -q -O- 'https://gnupg.org/ftp/gcrypt/libgcrypt/' | \
